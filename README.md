@@ -36,7 +36,7 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     </b>
 </div>
 <div align="center">
-<img src="misc/D4M_res_imgnt.png" alt="imagenet-1k results" width="600" />
+<img src="misc/D4M_res_imgnt.png" alt="imagenet-1k results" width="1000" />
 </div>
 
 <div align="center">
@@ -45,7 +45,7 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     </b>
 </div>
 <div align="center">
-<img src="misc/D4M_res_tnimgnt.png" alt="tiny-imagnet results" width="500" />
+<img src="misc/D4M_res_tnimgnt.png" alt="tiny-imagnet results" width="1000" />
 </div>
 
 <div align="center">
@@ -54,7 +54,7 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     </b>
 </div>
 <div align="center">
-<img src="misc/D4M_res_cf10.png" alt="cifar-10 results" width="500" />
+<img src="misc/D4M_res_cf10.png" alt="cifar-10 results" width="1000" />
 </div>
 
 <div align="center">
@@ -63,7 +63,7 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     </b>
 </div>
 <div align="center">
-<img src="misc/D4M_res_cf100.png" alt="cifar-100 results" width="500" />
+<img src="misc/D4M_res_cf100.png" alt="cifar-100 results" width="1000" />
 </div>
 
 ### Semantic Information
@@ -74,7 +74,7 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     </b>
 </div>
 <div align="center">
-<img src="misc/D4M_res_smtc_info.png" alt="semantic richness results" width="500" />
+<img src="misc/D4M_res_smtc_info.png" alt="semantic richness results" width="1000" />
 </div>
 
 > For more qualitative results, please see the supplementary in our <a href="https://arxiv.org/abs/2407.15138">paper</a>.
