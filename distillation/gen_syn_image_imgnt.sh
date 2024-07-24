@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=0 python gen_syn_image_imgnt.py \
+CUDA_VISIBLE_DEVICES=0 python gen_syn_image.py \
     --dataset imagenet \
     --diffusion_checkpoints_path ../stablediffusion/checkpoints/stable-diffusion-v1-5 \
     --guidance_scale 8 \

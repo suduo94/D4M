@@ -81,6 +81,14 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
 
 ## 📊 Quantitative results
 
+## 👍🏻 Acknowledgments
+
+Our code is developed based on the following codebases, thanks for sharing！
+
+* <a href="https://arxiv.org/abs/2407.15138">SRe<sup>2</sup>L</a>
+* <a href="https://arxiv.org/abs/2407.15138">FKD</a>
+* <a href="https://arxiv.org/abs/2407.15138">Diffusers</a>
+
 ## 📖 Citation
 
 ```
