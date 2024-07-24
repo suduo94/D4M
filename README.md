@@ -26,6 +26,36 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
 
 ## 🔧 Quick Start
 
+### Create environment
+
+- Python >=3.9
+- Pytorch >= 1.12.1
+- Torchvision >= 0.13.1
+
+### Install Diffusers Library
+
+You can install or upgrade the latest version of Diffusers library according to <a href="https://github.com/huggingface/diffusers">this page</a>.
+
+### Modify Diffusers Library
+
+Step 1:
+Copy the pipeline scripts (<a href="https://github.com/suduo94/D4M/blob/main/scripts/pipeline_stable_diffusion_gen_latents.py">generate latents pipeline</a> and <a href="https://github.com/suduo94/D4M/blob/main/scripts/pipeline_stable_diffusion_latents2img.py">synthesis images pipeline</a>) into the path of Diffusers Library: `diffusers/src/diffusers/pipelines/stable_diffusion`.
+
+Step 2:
+Modify Diffusers source code according to <a href="https://github.com/suduo94/D4M/blob/main/scripts/README.md">scripts/README.md</a>
+
+### Generate Prototypes
+``````bash
+cd distillation
+sh gen_prototype_imgnt.sh
+``````
+
+### Synthesis Images
+``````bash
+cd distillation
+sh gen_syn_image_imgnt.sh
+``````
+
 ## ✨ Qualitative results
 
 ### Compare to others
@@ -85,18 +115,18 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
 
 Our code is developed based on the following codebases, thanks for sharing！
 
-* <a href="https://arxiv.org/abs/2407.15138">SRe<sup>2</sup>L</a>
-* <a href="https://arxiv.org/abs/2407.15138">FKD</a>
-* <a href="https://arxiv.org/abs/2407.15138">Diffusers</a>
+- <a href="https://github.com/VILA-Lab/SRe2L">Squeeze, Recover and Relabel: Dataset Condensation at ImageNet Scale From A New Perspective</a>
+- <a href="https://github.com/szq0214/FKD/tree/main/FKD">FKD: A Fast Knowledge Distillation Framework for Visual Recognition</a>
 
 ## 📖 Citation
 
 ```
 @InProceedings{Su_2024_CVPR,
-               author    = {Su, Duo and Hou, Junjie and Gao, Weizhi and Tian, Yingjie and Tang, Bowen},
-               title     = {D{\textasciicircum}4M: Dataset Distillation via Disentangled Diffusion Model},
-               booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-               month     = {June},
-               year      = {2024},
-               pages     = {5809-5818}
-              }
+    author    = {Su, Duo and Hou, Junjie and Gao, Weizhi and Tian, Yingjie and Tang, Bowen},
+    title     = {D{\textasciicircum}4M: Dataset Distillation via Disentangled Diffusion Model},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {5809-5818}
+}
+```
