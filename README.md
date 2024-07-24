@@ -35,28 +35,36 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     ImageNet-1K Results (Top: D<sup>4</sup>M, Bottom: SRe<sup>2</sup>L)
     </b>
 </div>
+<div style="text-align: center;">
 <img src="misc/D4M_res_imgnt.png" alt="imagenet-1k results" width="500" />
+</div>
 
 <div align="center">
     <b>
     Tiny-ImageNet Results (Top: D<sup>4</sup>M, Bottom: SRe<sup>2</sup>L)
     </b>
 </div>
+<div style="text-align: center;">
 <img src="misc/D4M_res_tnimgnt.png" alt="tiny-imagnet results" width="500" />
+</div>
 
 <div align="center">
     <b>
     CIFAR-10 Results (Top: D<sup>4</sup>M, Bottom: MTT)
     </b>
 </div>
+<div style="text-align: center;">
 <img src="misc/D4M_res_cf10.png" alt="cifar-10 results" width="500" />
+</div>
 
 <div align="center">
     <b>
     CIFAR-100 Results (Top: D<sup>4</sup>M, Bottom: MTT)
     </b>
 </div>
+<div style="text-align: center;">
 <img src="misc/D4M_res_cf100.png" alt="cifar-100 results" width="500" />
+</div>
 
 ### Semantic Information
 
@@ -65,7 +73,9 @@ Through comprehensive experiments, D<sup>4</sup>M demonstrates superior performa
     Distilled data within one class (Top: D<sup>4</sup>M, Bottom: SRe<sup>2</sup>L)
     </b>
 </div>
+<div style="text-align: center;">
 <img src="misc/D4M_res_smtc_info.png" alt="semantic richness results" width="500" />
+</div>
 
 > For more qualitative results, please see the supplementary in our <a href="https://arxiv.org/abs/2407.15138">paper</a>.
 
