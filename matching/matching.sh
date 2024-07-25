@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=1,2,3,4,5 python generate_soft_label.py \
+CUDA_VISIBLE_DEVICES=1,2,3,4,5,6,7 python generate_soft_label.py \
     -a resnet18 \
     -b 1024 \
     -j 8 \
@@ -8,7 +8,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4,5 python generate_soft_label.py \
     --min-scale-crops 0.08 \
     --max-scale-crops 1 \
     --use-fp16 \
-    --fkd-path imagenet_ipc10_label18_random \
+    --fkd-path imagenet_ipc10_label18 \
     --mode 'fkd_save' \
     --mix-type 'cutmix' \
-    --data /home-ext/tbw/suduo/data/init_data/imagenet_ipc10_s0.7_g8.0_kmexpand1_random \
+    --data ../data/distilled_data/imagenet_ipc10_s0.7_g8.0_kmexpand1 \

@@ -42,7 +42,7 @@ Step 1:
 Copy the pipeline scripts (<a href="https://github.com/suduo94/D4M/blob/main/scripts/pipeline_stable_diffusion_gen_latents.py">generate latents pipeline</a> and <a href="https://github.com/suduo94/D4M/blob/main/scripts/pipeline_stable_diffusion_latents2img.py">synthesis images pipeline</a>) into the path of Diffusers Library: `diffusers/src/diffusers/pipelines/stable_diffusion`.
 
 Step 2:
-Modify Diffusers source code according to <a href="https://github.com/suduo94/D4M/blob/main/scripts/README.md">scripts/README.md</a>
+Modify Diffusers source code according to <a href="https://github.com/suduo94/D4M/blob/main/scripts/README.md">scripts/README.md</a>.
 
 ### Generate Prototypes
 ``````bash
@@ -54,6 +54,20 @@ sh gen_prototype_imgnt.sh
 ``````bash
 cd distillation
 sh gen_syn_image_imgnt.sh
+``````
+
+> Actually, if you don't need the JSON files (prototype) for exploration, you could combine the generate and synthesis processes into one, skipping the I/O steps.
+
+### Training-Time Matching (TTM)
+``````bash
+cd matching
+sh matching.sh
+``````
+
+### Validate
+``````bash
+cd validate
+sh train_FKD.sh
 ``````
 
 ## ✨ Qualitative results
