@@ -125,6 +125,15 @@ sh train_FKD.sh
 
 ## 📊 Quantitative results
 
+<div align="center">
+    <b>
+    Results on Large-Scale datasets
+    </b>
+</div>
+<div align="center">
+<img src="misc/D4M_res_imgnt_and_tnimgnt.png" alt="semantic richness results" width="800" />
+</div>
+
 ## 👍🏻 Acknowledgments
 
 Our code is developed based on the following codebases, thanks for sharing！
@@ -133,7 +142,7 @@ Our code is developed based on the following codebases, thanks for sharing！
 - <a href="https://github.com/szq0214/FKD/tree/main/FKD">FKD: A Fast Knowledge Distillation Framework for Visual Recognition</a>
 
 ## 📖 Citation
-
+If you find this work helpful, please cite:
 ```
 @InProceedings{Su_2024_CVPR,
     author    = {Su, Duo and Hou, Junjie and Gao, Weizhi and Tian, Yingjie and Tang, Bowen},
