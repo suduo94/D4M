@@ -61,18 +61,12 @@ def gen_syn_images(pipe, prototypes, label_list, args):
         for j in range(int(args.ipc/(pros.size(0)))):
             for i in range(pros.size(0)):
                 sub_pro = pros[i:i+1]
-                # sr = 'photo of some '
-                # prompt_new = sr + prompt + 's'
-                # ipdb.set_trace()
-                # photo of some XXXX
                 sub_pro_random = torch.randn((1, 4, 64, 64), device='cuda',dtype=torch.half)
                 images = pipe(prompt=prompt, latents=sub_pro, negative_prompt='cartoon, anime, painting', is_init=True, strength=args.strength, guidance_scale=args.guidance_scale).images
                 index = label_list.index(prompt)
                 save_path = os.path.join(args.save_init_image_path, "{}_ipc{}_{}_s{}_g{}_kmexpand{}".format(args.dataset, int(pros.size(0)), args.ipc, args.strength, args.guidance_scale, args.km_expand))
                 os.makedirs(os.path.join(save_path, "{}/".format(index)), exist_ok=True)
-                # ipdb.set_trace()
                 images[0].resize((224, 224)).save(os.path.join(save_path, "{}/{}-image{}{}.png".format(index, index, i, j)))
-                # images[0].save(os.path.join(save_path, "{}/{}-image{}{}.png".format(index, index, i, j)))
 
 
 def main():

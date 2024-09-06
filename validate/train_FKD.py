@@ -189,13 +189,13 @@ def main():
         # remember best acc@1 and save checkpoint
         is_best = top1 > args.best_acc1
         args.best_acc1 = max(top1, args.best_acc1)
-        # save_checkpoint({
-        #     'epoch': epoch + 1,
-        #     'state_dict': model.state_dict(),
-        #     'best_acc1': args.best_acc1,
-        #     'optimizer' : optimizer.state_dict(),
-        #     'scheduler' : scheduler.state_dict(),
-        # }, is_best, output_dir=args.output_dir)
+        save_checkpoint({
+            'epoch': epoch + 1,
+            'state_dict': model.state_dict(),
+            'best_acc1': args.best_acc1,
+            'optimizer' : optimizer.state_dict(),
+            'scheduler' : scheduler.state_dict(),
+        }, is_best, output_dir=args.output_dir)
 
 def adjust_bn_momentum(model, iters):
     for m in model.modules():
@@ -245,7 +245,6 @@ def train(model, args, epoch=None):
             output = F.log_softmax(output/args.temperature, dim=1)
             partial_soft_label = F.softmax(partial_soft_label/args.temperature, dim=1)
             loss = loss_function_kl(output, partial_soft_label)
-            # loss = loss * args.temperature * args.temperature
             loss = loss / args.gradient_accumulation_steps
             loss.backward()
 

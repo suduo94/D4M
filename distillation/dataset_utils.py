@@ -84,32 +84,17 @@ def load_syn_dataset(args):
     elif args.dataset == 'syn_imagenet':
         transform_train = transforms.Compose([
         transforms.Resize((224, 224)),
-        # transforms.RandomResizedCrop(224),
-        # transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
-        # transform_test = transforms.Compose([
-        #     transforms.Resize(256),
-        #     transforms.CenterCrop(224),
-        #     transforms.ToTensor(),
-        #     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-        # ])
         trainset = datasets.ImageFolder(root=args.data_dir, 
                                         transform=transform_train)
-        # testset = datasets.ImageFolder(root=args.data_dir, 
-                                    #    transform=transform_train)        
+       
 
     trainloader = torch.utils.data.DataLoader(
         trainset, batch_size=args.batch_size, shuffle=False,
         num_workers=args.num_workers
     )
-    # testloader = torch.utils.data.DataLoader(
-    #     testset, batch_size=args.batch_size, shuffle=False,
-    #     num_workers=args.num_workers
-    # )
-
-    # return trainloader, testloader
     return trainloader
 
 
